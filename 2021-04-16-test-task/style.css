@@ -1,0 +1,24 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+:root {
+	--border-px: 1px;
+	--global-color: #895CC8;
+	--main-font: 'Montserrat Alternates', sans-serif;
+}
+.wrapper {
+  margin: auto;
+  width: 1000px;
+  height: 250px;
+  border: var(--border-px) solid red;
+}
+.center {
+  text-align: center;
+}
+.mt {
+  margin-top: 20px;
+}
+.mb {
+  margin-bottom: 20px;
+}
