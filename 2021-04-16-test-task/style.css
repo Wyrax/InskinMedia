@@ -1,10 +1,11 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: content-box;
 }
 :root {
 	--border-px: 1px;
-	--global-color: #895CC8;
+	--global-color: #e30613;
 	--main-font: 'Montserrat Alternates', sans-serif;
 }
 .wrapper {
@@ -21,4 +22,7 @@
 }
 .mb {
   margin-bottom: 20px;
+}
+.video {
+  border: var(--border-px) solid greenyellow;
 }
