@@ -12,8 +12,37 @@
   margin: auto;
   width: 1000px;
   height: 250px;
+  background-image: url("./img/tombstones-bg.jpg");
+  overflow: hidden;
   border: var(--border-px) solid red;
 }
+#person {
+  position: relative;
+  width: 250px;
+  height: 250px;
+  left: 250px;
+  border: var(--border-px) solid yellow;
+}
+.person-img {
+}
+#person-0 {
+  position: absolute;
+  left: -150px;
+}
+#person-1 {
+  position: absolute;
+}
+#person-2 {
+  position: absolute;
+  left: 120px;
+}
+#person-3 {
+  position: absolute;
+  left: 250px;
+}
+/* .video-wrapper {
+  position: relative;
+} */
 .center {
   text-align: center;
 }
@@ -24,5 +53,8 @@
   margin-bottom: 20px;
 }
 .video {
+  float: right;
+  padding-right: 30px;
+  background-color: black;
   border: var(--border-px) solid greenyellow;
 }
