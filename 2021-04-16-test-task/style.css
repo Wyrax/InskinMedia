@@ -4,7 +4,7 @@
   box-sizing: content-box;
 }
 :root {
-	--border-px: 1px;
+	--border-px: 0px;
 	--global-color: #e30613;
 	--main-font: 'Montserrat Alternates', sans-serif;
 }
@@ -12,7 +12,8 @@
   margin: auto;
   width: 1000px;
   height: 250px;
-  background-image: url("./img/tombstones-bg.jpg");
+  /* background-image: url("./img/tombstones-bg.jpg"); */
+  background-image: url("./img/tombstones-bg-h.jpg");
   overflow: hidden;
   border: var(--border-px) solid red;
 }
@@ -24,25 +25,50 @@
   border: var(--border-px) solid yellow;
 }
 .person-img {
+  height: 100%;
 }
 #person-0 {
   position: absolute;
-  left: -150px;
+  top: 20px;
+  left: -10px;
+  height: 250px;
+  /* filter: brightness(0%) invert(100%); */
+  opacity: 1;
 }
 #person-1 {
   position: absolute;
+  top: 30px;
+  /* color: white; */
+  height: 300px;
+  /* filter: brightness(0%) invert(100%); */
+  opacity: 0;
 }
 #person-2 {
   position: absolute;
-  left: 120px;
+  top: 27px;
+  left: 0px;
+  height: 470px;
+  opacity: 0;
 }
 #person-3 {
   position: absolute;
-  left: 250px;
+  top: 0px;
+  left: 50px;
+  opacity: 0;
+  /* filter: hue-rotate(180deg) brightness(100%) grayscale(0%) invert(100%); */
 }
 /* .video-wrapper {
   position: relative;
 } */
+.cta-wrapper {
+  position: relative;
+  top: -70px;
+  left: 30px;
+}
+.cta-img {
+  margin-right: 20px;
+
+}
 .center {
   text-align: center;
 }
