@@ -13,15 +13,35 @@
   width: 1000px;
   height: 250px;
   /* background-image: url("./img/tombstones-bg.jpg"); */
-  background-image: url("./img/tombstones-bg-h.jpg");
+  background-image: url("./img/tombstones.jpg");
   overflow: hidden;
   border: var(--border-px) solid red;
 }
-#person {
+.video-wrapper {
+  position: relative;
+  /* padding-right: 10px; */
+  right: 30px;
+  top: 36px;
+  height: 178px;
+  overflow: hidden;
+  /* top: -100px; */
+  text-align: right;
+  border: var(--border-px) solid coral;
+}
+.video {
+  position: relative;
+  top: -42px;
+  background-color: black;
+  /* border: var(--border-px) solid greenyellow; */
+  border: 7px solid var(--global-color);
+  /* outline: 10px solid black; */
+}
+.person-wrapper {
   position: relative;
   width: 250px;
   height: 250px;
   left: 250px;
+  top: -180px;
   border: var(--border-px) solid yellow;
 }
 .person-img {
@@ -57,13 +77,11 @@
   opacity: 0;
   /* filter: hue-rotate(180deg) brightness(100%) grayscale(0%) invert(100%); */
 }
-/* .video-wrapper {
-  position: relative;
-} */
 .cta-wrapper {
   position: relative;
-  top: -70px;
+  top: -145px;
   left: 30px;
+  border: var(--border-px) solid greenyellow;
 }
 .cta-img {
   margin-right: 20px;
@@ -77,10 +95,4 @@
 }
 .mb {
   margin-bottom: 20px;
-}
-.video {
-  float: right;
-  padding-right: 30px;
-  background-color: black;
-  border: var(--border-px) solid greenyellow;
 }

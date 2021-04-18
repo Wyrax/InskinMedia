@@ -11,13 +11,13 @@
 <body>
   <h2 class="center mb">Inskin Media Test Task</h2>
   <div class="wrapper">
-    <!-- <div class="video-wrapper"> -->
-      <video class="video" width="444" height="250" autoplay muted>
+    <div class="video-wrapper">
+      <video class="video" width="444" height="250" autoplay>
         <source src="./img/awatt-20-he-v4-digital-small.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
-    <!-- </div> -->
-    <div id="person">
+    </div>
+    <div class="person-wrapper">
       <div id="person-0">
         <img class="person-img" src="./img/0th-250x400.png">
       </div>
@@ -32,18 +32,21 @@
       </div>
     </div>
 
-    <!-- <div class="cta-wrapper">
-      <a href=""><img class="cta-img" src="./img/google-play.png"></a>
-      <a href=""><img class="cta-img" src="./img/itunes.png"></a>
-    </div> -->
+    <div class="cta-wrapper">
+      <a href=""><img id="cta-google-play" class="cta-img" src="./img/google-play.png"></a>
+      <a href=""><img id="cta-itunes" class="cta-img" src="./img/itunes.png"></a>
+    </div>
 
 
   </div>
   <p class="center mt">Done by Anton Som</p>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
   <script>
-    gsap.to(".wrapper", {backgroundPosition: "0px -100px", duration: 40})
-    gsap.timeline({repeat: 0, delay: 22})
+    gsap.timeline({repeat: 0})
+    .to(".wrapper", {backgroundPosition: "0px -150px", duration: 25})
+    .to(".wrapper", {backgroundPosition: "0px -270px", duration: 1})
+
+    gsap.timeline({repeat: 3, delay: 22, repeatDelay: 10})
         // .to("#person-0", {opacity: 1, duration: 1})
         .to("#person-0", {height: 320, duration: 1}, "-=1")
         .to("#person-0", {filter: "brightness(0%) invert(100%)", duration: .1}, "-=.1")
@@ -56,10 +59,12 @@
         // .to("#person-2", {y: -160, duration: 2, ease: "slow (0.9, 0.7, false)"})
         .to("#person-2", {y: -180, duration: 2, ease: "power4.inOut"})
         .to("#person-2", {y: 0, x: -35, height: 600, duration: .9, ease: "power4.inOut"})
-        .to("#person-2", {filter: "brightness(0%) invert(100%)", duration: .1}/*, "-=.1"*/)
+        .to("#person-2", {filter: "brightness(0%) invert(100%)", duration: .1}, "-=.1")
         .to("#person-2", {opacity: 0, duration: .02})
-        .to("#person-3", {opacity: 1, duration: .02}, "-=.1")
+        .to("#person-3", {opacity: 1, duration: .1}, "-=.1")
         .to("#person-3", {x: 60, duration: 2})
+        .to("#cta-google-play", {y: -100, duration: .2})
+        .to("#cta-itunes", {y: -100, duration: .2})
 
 
 
@@ -67,7 +72,6 @@
 
         // .to("#person-0", {height: 300, duration: 1, delay: 0})
 
-        ;
   </script>
 </body>
 </html>
