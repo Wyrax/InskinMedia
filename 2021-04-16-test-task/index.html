@@ -10,9 +10,10 @@
 </head>
 <body>
   <h2 class="center mb">Inskin Media Test Task</h2>
-  <div class="wrapper">
+  <p class="center mt">First idea:</p><br>
+  <div id="wrapper" class="wrapper">
     <div class="video-wrapper">
-      <video class="video" width="444" height="250" autoplay>
+      <video id="video-first" class="video" width="444" height="250" autoplay >
         <source src="./img/awatt-20-he-v4-digital-small.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
@@ -28,8 +29,16 @@
         <img class="person-img" src="./img/2nd-250x400.png">
       </div>
       <div id="person-3">
-        <img class="person-img" src="./img/3rd-250x250.png">
+        <img class="person-img" src="./img/3rd-400x400.png">
       </div>
+    </div>
+
+    <div class="text-wrapper">
+      <div id="text-line-0">A WALK AMONGST THE</div>
+      <div id="text-line-1">TOMBSTONES</div>
+      <div id="text-line-2">PEOPLE ARE AFRAID OF</div>
+      <div id="text-line-3">ALL THE WRONG THINGS</div>
+      <!-- <div id="text-line-4">WRONG THINGS</div> -->
     </div>
 
     <div class="cta-wrapper">
@@ -39,38 +48,127 @@
 
 
   </div>
+  <p class="center mt">Second idea:</p><br>
+
+  <div id="wrapper-twin" class="wrapper">
+    <div class="video-wrapper">
+      <video id="video-twin" class="video" width="444" height="250">
+        <source src="./img/awatt-20-he-v4-digital-small.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+
+    <div class="text-wrapper">
+      <div id="text-line-0-twin">A WALK AMONGST THE</div>
+      <div id="text-line-1-twin">TOMBSTONES</div>
+      <div id="text-line-2-twin">PEOPLE ARE AFRAID OF</div>
+      <div id="text-line-3-twin">ALL THE WRONG THINGS</div>
+      <!-- <div id="text-line-4-twin">WRONG THINGS</div> -->
+    </div>
+
+    <div class="person-wrapper">
+      <!-- <div id="person-0-twin">
+        <img class="person-img" src="./img/0th-250x400.png">
+      </div>
+      <div id="person-1-twin">
+        <img class="person-img" src="./img/1st-175x330.png">
+      </div>
+      <div id="person-2-twin">
+        <img class="person-img" src="./img/2nd-250x400.png">
+      </div> -->
+      <div id="person-3-twin">
+        <img class="person-img" src="./img/3rd-400x400.png">
+      </div>
+    </div>
+
+    <div class="cta-wrapper">
+      <a href=""><img id="cta-google-play-twin" class="cta-img" src="./img/google-play.png"></a>
+      <a href=""><img id="cta-itunes-twin" class="cta-img" src="./img/itunes.png"></a>
+    </div>
+
+    
+
+  </div>
   <p class="center mt">Done by Anton Som</p>
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
   <script>
-    gsap.timeline({repeat: 0})
-    .to(".wrapper", {backgroundPosition: "0px -150px", duration: 25})
-    .to(".wrapper", {backgroundPosition: "0px -270px", duration: 1})
 
-    gsap.timeline({repeat: 3, delay: 22, repeatDelay: 10})
-        // .to("#person-0", {opacity: 1, duration: 1})
-        .to("#person-0", {height: 320, duration: 1}, "-=1")
-        .to("#person-0", {filter: "brightness(0%) invert(100%)", duration: .1}, "-=.1")
-        .to("#person-0", {opacity: 0, duration: .02})
-        .to("#person-1", {opacity: 1, duration: .1}, "-=.1")
-        .to("#person-1", {height: 400, duration: 2}, "-=.1")
-        .to("#person-1", {filter: "brightness(0%) invert(100%)", duration: .1}, "-=.1")
-        .to("#person-1", {opacity: 0, duration: .02})
-        .to("#person-2", {opacity: 1, duration: .1}, "-=.1")
-        // .to("#person-2", {y: -160, duration: 2, ease: "slow (0.9, 0.7, false)"})
-        .to("#person-2", {y: -180, duration: 2, ease: "power4.inOut"})
-        .to("#person-2", {y: 0, x: -35, height: 600, duration: .9, ease: "power4.inOut"})
-        .to("#person-2", {filter: "brightness(0%) invert(100%)", duration: .1}, "-=.1")
-        .to("#person-2", {opacity: 0, duration: .02})
-        .to("#person-3", {opacity: 1, duration: .1}, "-=.1")
-        .to("#person-3", {x: 60, duration: 2})
-        .to("#cta-google-play", {y: -100, duration: .2})
-        .to("#cta-itunes", {y: -100, duration: .2})
+let videoFirst = document.getElementById('video-first');
+let videoTwin = document.getElementById('video-twin');
+
+const playFirst = () => {
+  console.log('playFirst');
+  videoFirst.play();
+  return true;
+}
+
+const playTwin = () => {
+  console.log('playTwin');
+  videoTwin.play();
+  return true;
+}
+
+playFirst();
+
+gsap.timeline({repeat: 0})
+  .to('#wrapper', {backgroundPosition: '0px -150px', duration: 25})
+  .to('#wrapper', {backgroundPosition: '0px -270px', duration: 1});
+
+gsap.timeline({repeat: 0, delay: 22, repeatDelay: 4})
+  // .to('#person-0', {opacity: 1, duration: 1})
+  .to('#person-0', {height: 320, duration: 1}, '-=1')
+  .to('#person-0', {filter: 'brightness(0%) invert(100%)', duration: .1}, '-=.1')
+  .to('#person-0', {opacity: 0, duration: .02})
+  .to('#text-line-2', {opacity: 1, duration: .1}, '-=.1')
+
+  .to('#person-1', {opacity: 1, duration: .1}, '-=.1')
+  .to('#person-1', {height: 400, duration: 2}, '-=.1')
+  .to('#person-1', {filter: 'brightness(0%) invert(100%)', duration: .1}, '-=.1')
+  .to('#person-1', {opacity: 0, duration: .02})
+
+  .to('#person-2', {opacity: 1, duration: .1}, '-=.1')
+  .to('#person-2', {y: -180, duration: 2, ease: 'power4.inOut'})
+  .to('#text-line-3', {opacity: 1, duration: .1}, '-=.8')
+
+  .to('#person-2', {y: 0, x: -35, height: 600, duration: .9, ease: 'power4.inOut'})
+  .to('#person-2', {filter: 'brightness(0%) invert(100%)', duration: .1}, '-=.1')
+  .to('#person-2', {opacity: 0, duration: .02})
+  // .to('#text-line-0', {opacity: 1, duration: .1}, '-=.1')
+  // .to('#text-line-1', {opacity: 1, duration: .1}, '-=.1')
+
+  .to('#person-3', {opacity: 1, duration: .1}, '-=.1')
+  .to('#person-3', {x: 60, duration: 2})
+  .to('#text-line-0', {y: 100, duration: .2})
+  .to('#text-line-1', {y: 100, duration: .2})
+
+  .to('#cta-google-play', {y: -100, duration: .2})
+  .to('#cta-itunes', {y: -100, duration: .2});
+
+gsap.timeline({repeat: 0, delay: 32})
+  .to('#wrapper-twin', {backgroundPosition: '0px 0px', duration: 25})
+  // .to('#wrapper-twin', {backgroundPosition: '0px 270px', duration: 1});
+
+gsap.timeline({repeat: 0, delay: 32})
+  .to('#person-3-twin', {opacity: 1, duration: .1}, '-=.1')
+  .to('#person-3-twin', {x: 595, duration: 1}, '-=.1')
+  .to('#text-line-0-twin', {x: 240, duration: 1}, '-=.8')
+  .to('#text-line-1-twin', {x: 240, duration: 1}, '-=1')
+  .to('#text-line-2-twin', {x: 240, duration: 1}, '-=1')
+  .to('#text-line-3-twin', {x: 240, duration: 1}, '-=1')
+  // .to('#person-3-twin', {y: -20, duration: 5}, '-=1')
+  .to('#video-twin', {width: 'auto', opacity: 1, duration: 1})
+  .to('#video-twin', {filter: 'brightness(100%)', duration: 1})
+  .call(playTwin, null, null, '-=0.5')
+
+
+  .to('#cta-google-play-twin', {y: -100, duration: .2})
+  .to('#cta-itunes-twin', {y: -100, duration: .2});
 
 
 
 
-
-        // .to("#person-0", {height: 300, duration: 1, delay: 0})
+    // .to("#person-0", {height: 300, duration: 1, delay: 0})
 
   </script>
 </body>

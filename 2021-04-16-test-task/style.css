@@ -3,25 +3,42 @@
   padding: 0;
   box-sizing: content-box;
 }
+@font-face {
+  font-family: "Tungsten";
+  font-style: normal;
+  font-weight: 400;
+  src: url("img/tungsten.woff") format('woff');
+}
+@font-face {
+  font-family: "TungstenMedium";
+  font-style: normal;
+  font-weight: 400;
+  src: url("img/tungsten-medium.woff") format('woff');
+}
 :root {
 	--border-px: 0px;
 	--global-color: #e30613;
-	--main-font: 'Montserrat Alternates', sans-serif;
+	--main-font: 'TungstenMedium', 'Arial Narrow', sans-serif;
+	--secondary-font: 'Tungsten', 'Impact', sans-serif;
 }
 .wrapper {
+  position: relative;
   margin: auto;
   width: 1000px;
   height: 250px;
-  /* background-image: url("./img/tombstones-bg.jpg"); */
   background-image: url("./img/tombstones.jpg");
   overflow: hidden;
   border: var(--border-px) solid red;
+}
+#wrapper {
+
 }
 .video-wrapper {
   position: relative;
   /* padding-right: 10px; */
   right: 30px;
   top: 36px;
+
   height: 178px;
   overflow: hidden;
   /* top: -100px; */
@@ -33,6 +50,7 @@
   top: -42px;
   background-color: black;
   /* border: var(--border-px) solid greenyellow; */
+  /* box-shadow: 11px 11px 11px 11px rgba(0, 0, 0, 0.9); */
   border: 7px solid var(--global-color);
   /* outline: 10px solid black; */
 }
@@ -74,19 +92,55 @@
   position: absolute;
   top: 0px;
   left: 50px;
+  height: 250px;
   opacity: 0;
   /* filter: hue-rotate(180deg) brightness(100%) grayscale(0%) invert(100%); */
 }
 .cta-wrapper {
-  position: relative;
-  top: -145px;
+  position: absolute;
+  top: 275px;
   left: 30px;
   border: var(--border-px) solid greenyellow;
 }
 .cta-img {
   margin-right: 20px;
-
 }
+.text-wrapper {
+  position: absolute;
+  top: 15px;
+  left: 30px;
+  color: white;
+  text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+  font-size: 34px;
+  font-family: var(--main-font);
+  border: var(--border-px) solid purple;
+}
+#text-line-0 {
+  position: relative;
+  top: -100px;
+  font-size: 24px;
+  color: var(--global-color);
+}
+#text-line-1 {
+  position: relative;
+  top: -115px;
+  font-size: 60px;
+  color: var(--global-color);
+}
+#text-line-2 {
+  position: relative;
+  top: -20px;
+  opacity: 0;
+}
+#text-line-3 {
+  position: relative;
+  top: -30px;
+  opacity: 0
+}
+/* #text-line-4 {
+  position: relative;
+  top: -20px;
+} */
 .center {
   text-align: center;
 }
@@ -95,4 +149,46 @@
 }
 .mb {
   margin-bottom: 20px;
+}
+#wrapper-twin {
+  background-position: 0px -210px;
+}
+#video-twin {
+  width: 0px;
+  height: 250px;
+  opacity: 0;
+  filter: brightness(0%);
+}
+#person-3-twin {
+  position: absolute;
+  top: 0px;
+  left: -580px;
+  height: 250px;
+  opacity: 0;
+}
+#text-line-0-twin {
+  position: relative;
+  /* top: 0px; */
+  left: -240px;
+  font-size: 24px;
+  color: var(--global-color);
+}
+#text-line-1-twin {
+  position: relative;
+  top: -15px;
+  left: -240px;
+  font-size: 60px;
+  color: var(--global-color);
+}
+#text-line-2-twin {
+  position: relative;
+  top: -20px;
+  left: -240px;
+  /* opacity: 1; */
+}
+#text-line-3-twin {
+  position: relative;
+  top: -30px;
+  left: -240px;
+  /* opacity: 1 */
 }
