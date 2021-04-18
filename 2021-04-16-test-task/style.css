@@ -91,7 +91,7 @@
   left: 30px;
   color: white;
   text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
-  font-size: 34px;
+  font-size: 31px;
   font-family: var(--main-font);
   border: var(--border-px) solid purple;
 }
@@ -114,7 +114,7 @@
 }
 #text-line-3 {
   position: relative;
-  top: -30px;
+  top: -28px;
   opacity: 0
 }
 .center {
@@ -125,6 +125,17 @@
 }
 .mb {
   margin-bottom: 20px;
+}
+.logo-wrapper {
+  position: absolute;
+  top: 157px;
+  right: 50px;
+  width: 48px;
+  height: 48px;
+  border: var(--border-px) solid white;
+}
+#logo-twin {
+opacity: 0;
 }
 #wrapper-twin {
   background-position: 0px -210px;
@@ -162,6 +173,6 @@
 }
 #text-line-3-twin {
   position: relative;
-  top: -30px;
+  top: -28px;
   left: -240px;
 }

@@ -50,6 +50,10 @@
       <a href=""><img id="cta-itunes" class="cta-img" src="./img/itunes.png"></a>
     </div>
 
+    <div class="logo-wrapper">
+      <img id="logo" src="./img/entertainment-one-logo.svg">
+    </div>
+
   </div>
 
   <p class="center mt">Second idea:</p><br>
@@ -80,6 +84,10 @@
       <a href=""><img id="cta-itunes-twin" class="cta-img" src="./img/itunes.png"></a>
     </div>
 
+    <div class="logo-wrapper">
+      <img  id="logo-twin" src="./img/entertainment-one-logo.svg">
+    </div>
+
   </div>
 
   <p class="center mt">Done by Anton Som</p>
@@ -92,13 +100,37 @@ let videoTwin = document.getElementById('video-twin');
 
 const playFirst = () => {
   console.log('playFirst');
-  videoFirst.play();
+  videoFirst.play().catch(() => {
+    videoFirst.muted = true;
+    console.log('Video was muted after error catch.');
+    videoFirst.play();
+  });
   return true;
 }
 
 const playTwin = () => {
   console.log('playTwin');
-  videoTwin.play();
+  videoTwin.play().catch(() => {
+    videoTwin.muted = true;
+    console.log('Video was muted after error catch.');
+    videoTwin.play();
+  });
+  return true;
+}
+
+const showCastAndDate = () => {
+  let castTarget = document.getElementById('text-line-2');
+  let dateTarget = document.getElementById('text-line-3');
+  castTarget.textContent = 'LIAM NEESON will bring justice';
+  dateTarget.textContent = 'after DVD release date: Q4/\'15';
+  return true;
+}
+
+const showCastAndDateTwin = () => {
+  let castTarget = document.getElementById('text-line-2-twin');
+  let dateTarget = document.getElementById('text-line-3-twin');
+  castTarget.textContent = 'LIAM NEESON will bring justice';
+  dateTarget.textContent = 'after DVD release date: Q4/\'15';
   return true;
 }
 
@@ -131,6 +163,12 @@ gsap.timeline({repeat: 0, delay: 22, repeatDelay: 4})
   .to('#text-line-0', {y: 100, duration: .2})
   .to('#text-line-1', {y: 100, duration: .2})
 
+  .to('#text-line-2', {opacity: 0, duration: 1}, '+=1')
+  .to('#text-line-3', {opacity: 0, duration: 1}, '-=.85')
+  .call(showCastAndDate)
+  .to('#text-line-2', {opacity: 1, duration: .25})
+  .to('#text-line-3', {opacity: 1, duration: .25})
+
   .to('#cta-google-play', {y: -100, duration: .2})
   .to('#cta-itunes', {y: -100, duration: .2});
 
@@ -147,9 +185,17 @@ gsap.timeline({repeat: 0, delay: 32})
   .to('#video-twin', {width: 'auto', opacity: 1, duration: 1})
   .to('#video-twin', {filter: 'brightness(100%)', duration: 1})
   .call(playTwin, null, null, '-=0.5')
+  .to('#logo-twin', {opacity: 1, duration: .1}, '-=1.7')
+
+  .to('#text-line-2-twin', {x: -240, duration: 1}, '+=1')
+  .to('#text-line-3-twin', {x: -240, duration: 1}, '-=.85')
+  .call(showCastAndDateTwin)
+  .to('#text-line-2-twin', {x: 240, duration: .25})
+  .to('#text-line-3-twin', {x: 240, duration: .25})
 
   .to('#cta-google-play-twin', {y: -100, duration: .2})
-  .to('#cta-itunes-twin', {y: -100, duration: .2});
+  .to('#cta-itunes-twin', {y: -100, duration: .2})
+  ;
 
 </script>
 
