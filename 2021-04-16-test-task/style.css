@@ -4,12 +4,6 @@
   box-sizing: content-box;
 }
 @font-face {
-  font-family: "Tungsten";
-  font-style: normal;
-  font-weight: 400;
-  src: url("img/tungsten.woff") format('woff');
-}
-@font-face {
   font-family: "TungstenMedium";
   font-style: normal;
   font-weight: 400;
@@ -19,7 +13,6 @@
 	--border-px: 0px;
 	--global-color: #e30613;
 	--main-font: 'TungstenMedium', 'Arial Narrow', sans-serif;
-	--secondary-font: 'Tungsten', 'Impact', sans-serif;
 }
 .wrapper {
   position: relative;
@@ -30,18 +23,12 @@
   overflow: hidden;
   border: var(--border-px) solid red;
 }
-#wrapper {
-
-}
 .video-wrapper {
   position: relative;
-  /* padding-right: 10px; */
   right: 30px;
   top: 36px;
-
   height: 178px;
   overflow: hidden;
-  /* top: -100px; */
   text-align: right;
   border: var(--border-px) solid coral;
 }
@@ -49,10 +36,7 @@
   position: relative;
   top: -42px;
   background-color: black;
-  /* border: var(--border-px) solid greenyellow; */
-  /* box-shadow: 11px 11px 11px 11px rgba(0, 0, 0, 0.9); */
   border: 7px solid var(--global-color);
-  /* outline: 10px solid black; */
 }
 .person-wrapper {
   position: relative;
@@ -70,15 +54,12 @@
   top: 20px;
   left: -10px;
   height: 250px;
-  /* filter: brightness(0%) invert(100%); */
   opacity: 1;
 }
 #person-1 {
   position: absolute;
   top: 30px;
-  /* color: white; */
   height: 300px;
-  /* filter: brightness(0%) invert(100%); */
   opacity: 0;
 }
 #person-2 {
@@ -90,11 +71,10 @@
 }
 #person-3 {
   position: absolute;
-  top: 0px;
+  top: 2px;
   left: 50px;
   height: 250px;
   opacity: 0;
-  /* filter: hue-rotate(180deg) brightness(100%) grayscale(0%) invert(100%); */
 }
 .cta-wrapper {
   position: absolute;
@@ -137,10 +117,6 @@
   top: -30px;
   opacity: 0
 }
-/* #text-line-4 {
-  position: relative;
-  top: -20px;
-} */
 .center {
   text-align: center;
 }
@@ -161,14 +137,13 @@
 }
 #person-3-twin {
   position: absolute;
-  top: 0px;
+  top: 2px;
   left: -580px;
   height: 250px;
   opacity: 0;
 }
 #text-line-0-twin {
   position: relative;
-  /* top: 0px; */
   left: -240px;
   font-size: 24px;
   color: var(--global-color);
@@ -184,11 +159,9 @@
   position: relative;
   top: -20px;
   left: -240px;
-  /* opacity: 1; */
 }
 #text-line-3-twin {
   position: relative;
   top: -30px;
   left: -240px;
-  /* opacity: 1 */
 }
