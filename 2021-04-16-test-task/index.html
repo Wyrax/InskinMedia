@@ -102,7 +102,8 @@ const playFirst = () => {
   console.log('playFirst');
   videoFirst.play().catch(() => {
     videoFirst.muted = true;
-    console.log('Video was muted after error catch.');
+    videoFirst.controls = true;
+    console.log('Video was muted after error catch. Controls enabled.');
     videoFirst.play();
   });
   return true;
@@ -112,7 +113,8 @@ const playTwin = () => {
   console.log('playTwin');
   videoTwin.play().catch(() => {
     videoTwin.muted = true;
-    console.log('Video was muted after error catch.');
+    videoTwin.controls = true;
+    console.log('Video was muted after error catch. Controls enabled.');
     videoTwin.play();
   });
   return true;

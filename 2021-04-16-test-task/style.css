@@ -36,6 +36,7 @@
   position: relative;
   top: -42px;
   background-color: black;
+  outline: none;
   border: 7px solid var(--global-color);
 }
 .person-wrapper {
